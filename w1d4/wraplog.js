@@ -1,15 +1,12 @@
-// var wrapLog = function (callback, name) {
-//   /* your code here */
 
-// };
+var wrapLog = function (callback, name) {
+  // console.log(name);
+  // console.log(arguments);
 
-var wrapLog = function(callback, name){
-  console.log(callback, name);
-
-    callback(function areaOrVolume(arguments),name)){
-      console.log(arguments);
-      return arguments;
-    })
+  return function() {
+    var output = callback.apply(this, arguments);
+    console.log(output);
+  };
 };
 
 var area = function (x, y) {
