@@ -11,43 +11,27 @@ end
 
 def experienced?(candidate)
   # Your code Here
-  if candidate[:years_of_experience] >= 2
-    true
-  else
-    false
-  end
+  candidate[:years_of_experience] >= 2
 end
 
 
 def over_hundred_github_points?(candidate)
-  if candidate[:github_points] >=100
-    true
-  else
-    false
-  end
+  candidate[:github_points] >=100
 end
 
 
 def ruby_or_python?(candidate)
-  candidate[:languages].include?'Ruby' || 'Python'
+  candidate[:languages].include?'Ruby' || candidate[:languages].include?'Python'
 end
 
 
 def date_applied?(candidate)
-  if candidate[:date_applied] > 15.days.ago
-    true
-  else
-    false
-  end
+  candidate[:date_applied] > 15.days.ago
 end
 
 
 def age_over_17?(candidate)
-  if candidate[:age] > 17
-    true
-  else
-    false
-  end
+  candidate[:age] > 17
 end
 
 
